@@ -26,7 +26,8 @@ const Header = () => {
               height="32"
               viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg" className="svglogodev"
+              xmlns="http://www.w3.org/2000/svg"
+              className="svglogodev"
             >
               <path
                 d="M12 2L2 7L12 12L22 7L12 2Z"
@@ -49,11 +50,14 @@ const Header = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-            </svg>          
+            </svg>
             <span className="logo-text">Devronic</span>
           </NavLink>
           {/* Desktop Navigation - Hidden on mobile */}
           <nav className="main-nav">
+            <NavLink to="/" className="nav-link">
+              Home
+            </NavLink>
             <NavLink to="/projects" className="nav-link">
               Products
             </NavLink>
@@ -83,6 +87,9 @@ const Header = () => {
 
       {/* Mobile Navigation Panel - Slides in from the side */}
       <div className={`mobile-nav ${isMenuOpen ? "mobile-nav-open" : ""}`}>
+        <NavLink to="/" className="nav-link">
+          Home
+        </NavLink>
         <NavLink to="/projects" className="nav-link" onClick={closeMenu}>
           Products
         </NavLink>
