@@ -1,0 +1,106 @@
+.about-us-page-about {
+    position: relative;
+    background-color: var(--dark-bg);
+    overflow: hidden;
+}
+
+
+.about-us-page-about::before {
+    content: '';
+    position: absolute;
+    top: -150px;
+    left: -150px;
+    width: 600px;
+    height: 600px;
+    background-image: radial-gradient(circle, rgba(120, 80, 220, 0.15) 0%, rgba(13, 17, 23, 0) 70%);
+    z-index: 0;
+}
+
+.about-us-page-about .container-about {
+    position: relative;
+    z-index: 1;
+}
+
+.who-we-are-section-about {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.who-we-are-section-about .text-content-about {
+    flex: 1;
+}
+
+.who-we-are-section-about .image-content-about {
+    flex: 1;
+}
+
+.who-we-are-section-about .image-content img-about {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.who-we-are-section-about h2, .our-mission-section-about h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.highlight-text-about {
+    color: #ae81ff; 
+}
+.who-we-are-section-about .text-content-about p{
+    letter-spacing: .025em;
+text-align: justify;
+}
+.our-mission-section-about {
+    text-align: center;
+}
+.our-mission-section-about .section-subtitle-about{
+    width: 100%;
+    text-align: justify;    letter-spacing: .025em;
+
+}
+.values-grid-about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.value-card-about {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid #ae81ff;
+}
+
+.value-icon-about {
+    font-size: 1.8rem;
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(174, 129, 255, 0.1);
+    border-radius: 8px;
+    color: #ae81ff;
+    margin-bottom: 20px;
+}
+
+.value-card-about h3 {
+    font-size: 1.4rem;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+@media (max-width:600px){
+    .text-content-about p{
+        font-size: 0.9rem;
+    }
+    .text-content-about h2{
+        font-size: 2rem;
+    }
+    .our-mission-section-about h2{
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,203 @@
+.process-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin: 80px 0;
+  }
+  
+  .process-step {
+    width: 22%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .step-number-container {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border: 3px solid var(--dark-bg);
+    z-index: 2;
+  }
+  
+  .step-icon {
+      font-size: 2.5rem;
+      color: var(--text-primary);
+      margin-top: 15px;
+      padding: 15px;
+      background: var(--card-bg);
+      border-radius: 50%;
+      border: 1px solid var(--border-color);
+  }
+  
+  .process-step h3 {
+    margin-top: 70px; /* Space for icon and number */
+    font-size: 1.4rem;
+  }
+  
+  .timeline-connector {
+    flex-grow: 1;
+    height: 2px;
+    background-color: var(--border-color);
+    align-self: flex-start;
+    margin-top: 55px; /* Aligns with middle of icon */
+  }
+  
+  .cta-container {
+    margin-top: 60px;
+  }
+  .process-step p{
+    letter-spacing: -.020em;
+
+  }
+  
+  .how-it-works-page .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  /* --- Desktop Timeline Styles (Horizontal) --- */
+  
+  .process-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin: 100px 0;
+  }
+  
+  .process-step {
+    width: 23%; /* Adjusted slightly for better spacing */
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .step-number-container {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border: 3px solid var(--dark-bg);
+    z-index: 2;
+  }
+  
+  .step-icon {
+      font-size: 2.5rem;
+      color: var(--text-primary);
+      margin-top: 15px;
+      padding: 15px;
+      background: var(--card-bg);
+      border-radius: 50%;
+      border: 1px solid var(--border-color);
+  }
+  
+  .process-step h3 {
+    margin-top: 70px; /* Space for icon and number */
+    font-size: 1.4rem;
+  }
+  
+  .process-step p {
+    letter-spacing: -0.02em;
+    color: var(--text-secondary);
+  }
+  
+  .timeline-connector {
+    flex-grow: 1;
+    height: 2px;
+    background-color: var(--border-color);
+    align-self: flex-start;
+    margin-top: 55px; /* Aligns with middle of icon */
+  }
+  
+  .cta-container {
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  
+  /* --- New Mobile & Tablet Responsive Styles --- */
+  /* This media query will apply on screens 768px wide or smaller */
+  @media (max-width: 768px) {
+    .process-timeline {
+      /* Switch to a vertical layout */
+      flex-direction: column;
+      align-items: center; /* Center the items horizontally */
+      gap: 80px; /* Add space between the stacked cards */
+      margin: 80px auto;
+      
+      /* This creates the vertical connector line */
+      position: relative;
+    }
+  
+    /* Create the vertical line using a pseudo-element */
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      top: 25px; /* Start below the first icon */
+      bottom: 25px; /* End above the last icon */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      background-color: var(--border-color);
+      z-index: 0;
+    }
+  
+    .process-step {
+      /* Each step now takes up most of the width */
+      width: 90%;
+      max-width: 400px;
+    }
+  
+    .timeline-connector {
+      /* Hide the horizontal connector lines on mobile */
+      display: none;
+    }
+  
+    .step-number-container {
+      /* The icon container is already positioned correctly, no changes needed */
+    }
+  
+    .process-step h3 {
+      /* Adjust top margin as the icon is now directly above */
+      margin-top: 60px;
+    }
+  }

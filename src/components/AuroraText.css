@@ -1,0 +1,57 @@
+/* --- Animation Definition --- */
+
+/* This is the core animation that creates the shimmer effect.
+   It works by moving the background-position of a very wide gradient. */
+   @keyframes aurora-animation {
+    from {
+      background-position: 0% center;
+    }
+    to {
+      background-position: -200% center;
+    }
+  }
+  
+  
+  /* --- Component Styles --- */
+  
+  /* The main container for the text */
+  .aurora-text-container {
+    position: relative;
+    display: inline-block; /* Behaves like text but can have block properties */
+  }
+  
+  /* This is the visible, animated text */
+  .aurora-text-animated {
+    /* 
+      The background is made twice as wide as the element itself.
+      This is what allows the gradient to "move" across the text.
+    */
+    background-size: 200% auto;
+  
+    /* This is the magic trick: it clips the background to the shape of the text. */
+    background-clip: text;
+    -webkit-background-clip: text; /* Vendor prefix for Safari/Chrome */
+  
+    /* This makes the text color itself transparent, so the background shows through. */
+    -webkit-text-fill-color: transparent;
+  
+    /* Apply the animation */
+    animation: aurora-animation infinite linear;
+  }
+  
+  
+  /* 
+    This is a standard accessibility class to hide content visually 
+    but keep it available for screen readers.
+  */
+  .aurora-text-accessibility {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }

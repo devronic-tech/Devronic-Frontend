@@ -1,0 +1,28 @@
+.scroll-progress-bar {
+    /* Positioning: Fixed to the top of the viewport */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  
+    /* Size & Appearance */
+    height: 4px; /* A little thicker than 1px to be more visible */
+    background: linear-gradient(to right, #A97CF8, #F38CB8, #FDCC92);
+  
+    /* 
+      IMPORTANT: This makes the bar grow from the left side.
+      Without this, it would grow from the center.
+    */
+    transform-origin: left;
+  
+    /* Ensure it's on top of most other content */
+    z-index: 9999;
+  }
+  
+  /* 
+    A special "modifier" class we can add to place the bar 
+    BELOW our 80px tall fixed header.
+  */
+  .scroll-progress-bar.below-header {
+    top: 80px; /* The height of our main header */
+  }

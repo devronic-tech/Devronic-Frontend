@@ -1,0 +1,89 @@
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: left;
+  }
+  
+  .service-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 10px #ae81ff;
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .learn-more {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  .why-choose-us-section {
+    background-color: var(--dark-bg); /* slightly different from card bg */
+    padding: 60px 0;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .feature-card {
+    padding: 20px;
+    text-align: center;
+    
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+  }
+  
+  .cta-section {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .cta-section h2 {
+    color: white;
+  }
+  
+  .cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+  }
+  
+  .cta-section .btn {
+    background-color: white;
+    color: var(--primary-blue);
+  }
+  @media screen and (max-width:600px){
+    .section-title{
+      font-size: 2.1rem !important;
+    }
+    }
