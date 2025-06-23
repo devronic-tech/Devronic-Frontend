@@ -88,9 +88,45 @@
 .footer-column ul a:hover {
   color: var(--heading-color);
 }
+.social-icons-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between the icons */
+}
+
+.social-icons-container a {
+  color: var(--text-secondary); /* Default icon color */
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block; /* Allows transform to work */
+}
+
+.social-icons-container a:hover {
+  color: var(--heading-color); /* Color on hover */
+  transform: translateY(-3px); /* A nice little lift effect on hover */
+}
 @media (max-width:600px) {
   .btn-gradient{
     padding: 0.8rem;
     font-size: 0.8rem;
   }
+}
+
+.social-icons-container a[aria-label="LinkedIn"]:hover { 
+  color: #0A66C2; 
+}
+
+/* Twitter / X: Can be modern blue or black */
+.social-icons-container a[aria-label="Twitter"]:hover { 
+  color: #1DA1F2; /* Classic Twitter blue */
+  /* Or use #FFFFFF for the new 'X' logo style if you prefer */
+}
+
+/* Instagram: Gradient (we can't apply a gradient to stroke, so we'll pick a primary color) */
+.social-icons-container a[aria-label="Instagram"]:hover { 
+  color: #E4405F; /* A prominent pink/red from the Instagram gradient */
+}
+
+/* Email: Can be your brand's primary blue */
+.social-icons-container a[aria-label="Email"]:hover {
+  color: var(--primary-blue); /* Using the blue from your theme */
 }

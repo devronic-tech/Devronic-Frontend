@@ -49,10 +49,9 @@ const Header = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-            </svg>
+            </svg>          
             <span className="logo-text">Devronic</span>
           </NavLink>
-
           {/* Desktop Navigation - Hidden on mobile */}
           <nav className="main-nav">
             <NavLink to="/projects" className="nav-link">
