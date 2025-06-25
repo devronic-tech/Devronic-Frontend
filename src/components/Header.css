@@ -165,3 +165,9 @@
     font-size: 1.5rem;
   }
 }
+.imgHeader{
+  height: 50px;
+  /* background: #000; */
+  width:fit-content;
+  margin-right: -1rem;
+}

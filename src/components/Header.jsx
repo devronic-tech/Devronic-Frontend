@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
-
+import logo from "../assets/logo4.png"
 const Header = () => {
   // State to manage whether the mobile menu is open or closed
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +21,7 @@ const Header = () => {
       <header className="main-header">
         <div className="header-container">
           <NavLink to="/" className="logo-container" onClick={closeMenu}>
-            <svg
+            {/* <svg
               width="32"
               height="32"
               viewBox="0 0 24 24"
@@ -50,7 +50,8 @@ const Header = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-            </svg>
+            </svg> */}
+            <img src={logo} alt="" className="imgHeader" />
             <span className="logo-text">Devronic</span>
           </NavLink>
           {/* Desktop Navigation - Hidden on mobile */}
