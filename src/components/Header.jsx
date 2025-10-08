@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
-import logo from "../assets/logo4.png"
+import logo from "../assets/devlogo.png"
 const Header = () => {
   // State to manage whether the mobile menu is open or closed
   const [isMenuOpen, setIsMenuOpen] = useState(false);

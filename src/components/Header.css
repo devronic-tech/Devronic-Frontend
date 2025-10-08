@@ -166,8 +166,8 @@
   }
 }
 .imgHeader{
-  height: 50px;
+  height: 40px;
   /* background: #000; */
   width:fit-content;
-  margin-right: -1rem;
+  margin-right: -0.5rem;
 }
